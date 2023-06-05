@@ -3,9 +3,7 @@ package com.demo.feign.config;
 import feign.RequestInterceptor;
 import feign.RequestTemplate;
 import org.springframework.http.MediaType;
-import org.springframework.stereotype.Component;
 
-@Component
 public class CustomRequestInterceptor implements RequestInterceptor {
 
   @Override
