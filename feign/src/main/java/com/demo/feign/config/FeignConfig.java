@@ -40,6 +40,7 @@ public class FeignConfig {
         .requestInterceptor(new CustomRequestInterceptor())
         .retryer(new Retryer.Default(RETRY_INTERVAL, TimeUnit.SECONDS.toMillis(RETRY_INTERVAL),
             MAX_ATTEMPTS))
+        .errorDecoder(new CustomErrorDecoder())
         .target(clazz, baseUrl);
   }
 }

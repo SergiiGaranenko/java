@@ -33,10 +33,15 @@ public class BffController {
     return ResponseEntity.ok(paginatedData);
   }
 
-  @PostMapping("/downstream/some-operation")
+  @PostMapping("/some-operation")
   public ResponseEntity<UpdateRs> process(@RequestBody final UpdateRq updateRq) {
     final UpdateRs response = downstreamServiceApi.process(updateRq);
     return ResponseEntity.ok(response);
+  }
+
+  @GetMapping("/error-case")
+  public void testErrorResponse() {
+    downstreamServiceApi.testErrorResponse();
   }
 
 }

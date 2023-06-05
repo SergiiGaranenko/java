@@ -21,4 +21,7 @@ public interface DownstreamServiceApi {
 
   @PostMapping("/downstream/some-operation")
   UpdateRs process(UpdateRq updateRq);
+
+  @GetMapping("/downstream/error")
+  public void testErrorResponse();
 }
