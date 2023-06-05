@@ -51,4 +51,9 @@ public class DownstreamServerController {
     return ResponseEntity.ok(rs);
   }
 
+  @GetMapping("/downstream/error")
+  public void throwCustomError() {
+    throw new RuntimeException("01.02.14");
+  }
+
 }
