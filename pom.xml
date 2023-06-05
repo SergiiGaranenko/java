@@ -24,6 +24,7 @@
 
   <modules>
     <module>downstream</module>
+    <module>feign</module>
   </modules>
 
   <build>
