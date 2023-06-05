@@ -37,6 +37,7 @@ public class FeignConfig {
         .contract(new SpringMvcContract())
         .encoder(new PageableQueryEncoder(new SpringEncoder(this.messageConverters)))
         .decoder(new JacksonDecoder())
+        .requestInterceptor(new CustomRequestInterceptor())
         .retryer(new Retryer.Default(RETRY_INTERVAL, TimeUnit.SECONDS.toMillis(RETRY_INTERVAL),
             MAX_ATTEMPTS))
         .target(clazz, baseUrl);
