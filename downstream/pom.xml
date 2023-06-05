@@ -11,7 +11,7 @@
   </parent>
 
   <groupId>com.demo</groupId>
-  <artifactId>feign</artifactId>
+  <artifactId>downstream</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>downstream</name>
   <description>feign</description>
